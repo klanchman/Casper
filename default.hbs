@@ -14,6 +14,9 @@
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some CSS which we only want to use in post.hbs --}}
+    {{{block "styles"}}}
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
