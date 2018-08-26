@@ -873,18 +873,20 @@ Usage (In Ghost editor):
     margin-bottom: 0;
 }
 
+.post-full-content code,
+.post-full-content pre {
+    /* Prism fonts */
+    font-family: 'SF Mono', Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    /* Prism background */
+    background: #f5f2f0;
+}
+
 .post-full-content code {
     padding: 0 5px 2px;
-
-    /* Match Prism fonts */
-    font-family: 'SF Mono', Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400!important;
-
-    /* Match Prism background */
-    background: #f5f2f0;
 
     border-radius: 3px;
 }
@@ -892,14 +894,17 @@ Usage (In Ghost editor):
 .post-full-content pre {
     overflow-x: auto;
     margin: 1.5em 0 3em;
-    padding: 20px;
+    /* Prism padding */
+    padding: 1em;
     max-width: 100%;
-    /* border: color(var(--darkgrey) l(-10%)) 1px solid; */
-    color: var(--whitegrey);
     font-size: 1.4rem;
     line-height: 1.5em;
-    background: color(var(--darkgrey) l(-3%));
     border-radius: 5px;
+}
+
+.post-full-content pre[class*="language-"] {
+    /* Ghost margin */
+    margin: 1.5em 0 3em;
 }
 
 .post-full-content pre code {
